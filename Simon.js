@@ -6,6 +6,7 @@ var winCounter = 0;
 var options =["red","green","blue","yellow"];
 var userGuess = [];
 var computerGuess = [];
+var counterClicks =0;
 
 function computerChoice(){
 	computerGuess += options[Math.floor(Math.random()*options.length)];
@@ -17,6 +18,13 @@ function reset (){
 	computerGuess = [];
 };
 
+function compareInput(){
+	if(computerGuess[counterClicks] !== userGuess[counterClicks]){
+		alert("FAIL!");
+		reset();
+	}
+};
+
 
 	$("#start").on("click", function(){
 		reset();
@@ -25,17 +33,22 @@ function reset (){
 	});
 
 	$(".btn").on("click", function(){
+		counterClicks ++;
 		userGuess += this.id ;
 		console.log(userGuess);
+		//compareInput();
+		
 			if(userGuess.length < computerGuess.length){
 				return;
 			}	else if (userGuess === computerGuess){
 					winCounter++;
+					$('#counter').html(winCounter);
 					userGuess = [];
 					console.log("before" + computerGuess);
 					computerChoice();
 					console.log("after" + computerGuess);
 					console.log(winCounter);
+					console.log(computerGuess);
 				}
 	});
 
