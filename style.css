@@ -1,0 +1,99 @@
+*{
+	/*box-sizing: border-box;*/
+}
+
+.background{
+	height: 500px;
+	width:500px;
+	border-radius: 50%;
+	background-color: grey;
+	border: 5px solid black;
+	position: relative;
+	z-index: 1;
+	
+}
+
+#red {
+	height: 200px;
+	width: 200px;
+	background:red;
+	position:absolute;
+	background-color: red;
+	border-top-left-radius: 100%;
+	right:250px;
+	top:50px;
+	z-index: 10;
+}
+
+#blue {
+	position: absolute;
+	background-color: blue;
+	height: 200px;
+	width: 200px;
+	border-top-right-radius: 100%;
+	left: 250px;
+	top:50px;
+	z-index: 10;
+
+
+
+}
+
+#yellow{
+	position: absolute;
+	background-color: yellow;
+	height: 200px;
+	width: 200px;
+	border-bottom-left-radius: 100%;
+	right:250px;
+	top: 250px;
+	z-index: 10;
+}
+
+#green {
+	position: absolute;
+	background-color: green;
+	height: 200px;
+	width: 200px;
+	border-bottom-right-radius: 100%;
+	left: 250px;
+	top: 250px;
+	z-index: 10;
+}
+
+#info-space {
+	position:absolute;
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
+	background-color: grey;
+	z-index: 20;
+	top:125px;
+	left: 125px;
+
+}
+
+#counter {
+	border-radius: 5px;
+}
+
+body{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+#title{
+	text-align: center;
+}
+#start{
+	position: absolute;
+	left: 100px;
+}
+
+#counter {
+	color: red;
+	background-color: black;
+	padding: 17px;
+	position: absolute;
+	left:100px;
+}
